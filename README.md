@@ -1,2 +1,2 @@
-# boil-threejs
-A template for Three.js project
+# Boil-Three.js
+A boilerplate for Three.js project
