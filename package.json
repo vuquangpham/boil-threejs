@@ -1,0 +1,27 @@
+{
+  "name": "boil3js",
+  "version": "0.0.1",
+  "description": "The boilerplate for Three.js project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuquangpham/boil3js.git"
+  },
+  "keywords": [
+    "three.js",
+    "boilerplate"
+  ],
+  "author": {
+    "name": "Vu Pham",
+    "email": "vuquangpham@email.com",
+    "url": "https://github.com/vuquangpham"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuquangpham/boil3js/issues"
+  },
+  "homepage": "https://github.com/vuquangpham/boil3js#readme"
+}
