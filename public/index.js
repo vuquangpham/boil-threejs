@@ -1,4 +1,8 @@
+// load styles
 import './style.css';
-import '../src/_index';
 
-alert('hello script');
+// load script from src
+import Experience from "@/_index";
+
+const experience = new Experience('#canvas');
+console.log(experience);
