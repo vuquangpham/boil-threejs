@@ -4,7 +4,11 @@
   "description": "The boilerplate for Three.js project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --host --open",
+    "build": "vite build",
+    "preview": "vite preview --open",
+    "buildpreview": "vite build && vite preview --open"
   },
   "repository": {
     "type": "git",
@@ -23,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/vuquangpham/boil3js/issues"
   },
-  "homepage": "https://github.com/vuquangpham/boil3js#readme"
+  "homepage": "https://github.com/vuquangpham/boil3js#readme",
+  "devDependencies": {
+    "vite": "^4.4.11",
+    "vite-plugin-glsl": "^1.1.2"
+  }
 }
