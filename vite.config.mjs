@@ -1,6 +1,8 @@
 import glsl from 'vite-plugin-glsl';
 import {defineConfig} from 'vite';
 
+import {resolve} from 'path';
+
 export default defineConfig({
     publicDir: '../assets',
     root: 'public',
@@ -18,7 +20,18 @@ export default defineConfig({
             },
         }
     },
+
+    // resolve alias
+    resolve: {
+        alias: [
+            {find: '@', replacement: resolve(__dirname, 'src')},
+        ],
+    },
+
+    // plugins
     plugins: [glsl()],
+
+    // dev server
     server: {
         port: 8080
     }
