@@ -2,9 +2,9 @@
 
 > Taken inspiration from Bruno Simon - the author of Three.js Journey course.
 
-👉 <a href="https://boil3js.netlify.app/?debug" target="_blank">Check it here!</a>
+> ⚠️ This template is under construction and will be customized accordingly to my Three.js projects.
 
-⚠️ This template is under construction and will be customized accordingly to my Three.js projects.
+👉 <a href="https://boil3js.netlify.app/?debug" target="_blank">Check it here!</a>
 
 ## Setup
 
