@@ -69,4 +69,45 @@ export default class Experience{
         // update the renderer
         this.renderer.update();
     }
+
+    destroy(){
+        this.sizes.off('resize');
+        this.time.off('resize');
+
+        // destroy resize method
+        window.removeEventListener('resize', this.sizes.handleResize);
+
+        // remove rAF
+        this.time.stop();
+
+        // destroy the scene by travelling
+        this.scene.traverse(child => {
+            // dispose geometries, materials, textures, controls, passes, ...
+            if(child.isMesh){
+                child.geometry.dispose();
+
+                for(const key in child.material){
+                    const value = child.material[key];
+
+                    // if the object has the dispose function
+                    if(value && typeof value.dispose === 'function'){
+                        value.dispose();
+                    }
+                }
+            }
+        });
+
+        // dispose the controls
+        this.camera.controls.dispose();
+
+        // dispose the renderer
+        this.renderer.instance.dispose();
+
+        // dispose the things if we are using POST PROCESSING like EffectComposer, WebGLRenderTarget
+
+        // dispose the debug
+        if(this.debug.active){
+            this.debug.gui.destroy();
+        }
+    }
 }

@@ -15,7 +15,8 @@ export default class Sizes extends EventEmitter{
 
         // register resize event
         if(updateWhenResize){
-            window.addEventListener('resize', debounce(this.trigger.bind(this, 'resize')));
+            this.handleResize = debounce(this.trigger.bind(this, 'resize'));
+            window.addEventListener('resize', this.handleResize);
         }
     }
 
