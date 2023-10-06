@@ -8,6 +8,7 @@
 
 ```shell
 # Clone the template to your local or create a repository from this template
+git clone https://github.com/vuquangpham/boil3js.git
 
 # Install dependencies
 npm install
@@ -15,11 +16,11 @@ npm install
 
 ## Getting Started
 
-I did almost necessary code for the Three.js project, you can check it inside the src folder.
+I did almost the necessary code for the Three.js project, you can check it inside the src folder.
 
 ### Debug
 
-> Just add `?debug` to the end of your URL for getting the debug panel 😉
+> Just add `?debug` to the end of your URL to get the debug panel 😉
 
 ## Deployment
 
