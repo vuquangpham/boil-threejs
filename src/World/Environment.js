@@ -6,6 +6,12 @@ export default class Environment{
         this.scene = this.experience.scene;
         this.resources = this.experience.resources;
 
+        // debug
+        this.debug = this.experience.debug;
+        if(this.debug.active){
+            this.environtmentFolder = this.debug.gui.addFolder('environment');
+        }
+
         this.setSunLight();
         this.setEnvironmentMap();
     }
@@ -35,11 +41,17 @@ export default class Environment{
         const updateMaterials = () => {
             this.scene.traverse(child => {
                 if(child.isMesh && child.material.isMeshStandardMaterial){
+                    child.material.envMapIntensity = this.environtmentMap.intensity;
                     child.material.envMap = this.environtmentMap.texture;
                     child.material.envMapIntensity = this.environtmentMap.intensity;
                     child.material.needsUpdate = true;
                 }
             });
         };
+
+        // add to the debug
+        if(this.debug.active){
+            this.environtmentFolder.add(this.environtmentMap, 'intensity', 0, 10, 0.001).onChange(updateMaterials);
+        }
     }
 }

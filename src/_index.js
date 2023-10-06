@@ -5,9 +5,9 @@ import Camera from '@/Camera';
 import Resources from "@/Utils/Resources";
 import Renderer from "@/Renderer";
 import World from "@/World/World";
+import Debug from "@/Utils/Debug";
 
 import * as THREE from 'three';
-
 // helpers
 import {validateTarget} from "@/helpers";
 import sources from '@/sources.js';
@@ -26,6 +26,7 @@ export default class Experience{
         if(!this.canvas) return;
 
         // setup
+        this.debug = new Debug();
         this.sizes = new Sizes();
         this.time = new Time();
         this.scene = new THREE.Scene();
