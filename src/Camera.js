@@ -13,7 +13,7 @@ export default class Camera{
     }
 
     setInstance(){
-        this.instance = new THREE.PerspectiveCamera(75, this.sizes.aspect);
+        this.instance = new THREE.PerspectiveCamera(75, this.sizes.aspect, 0.1, 100);
         this.instance.position.set(6, 4, 8);
         this.scene.add(this.instance);
     }
@@ -24,7 +24,7 @@ export default class Camera{
     }
 
     resize(){
-        this.instance.aspect = this.sizes.aspectRatio;
+        this.instance.aspect = this.sizes.aspect;
         this.instance.updateProjectionMatrix();
     }
 
