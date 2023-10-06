@@ -4,5 +4,6 @@
 /.idea/modules.xml
 /.idea/php.xml
 /.idea/vcs.xml
-/node_modules
 /.idea/jsLibraryMappings.xml
+/node_modules
+/package-lock.json
