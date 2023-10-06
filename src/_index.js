@@ -1,5 +1,9 @@
 // deps
 import Sizes from "@/Utils/Sizes";
+import Time from "@/Utils/Time";
+import Camera from '@/Camera';
+
+import * as THREE from 'three';
 
 // helpers
 import {validateTarget} from "@/helpers";
@@ -19,10 +23,33 @@ export default class Experience{
 
         // setup
         this.sizes = new Sizes();
+        this.time = new Time();
+        this.scene = new THREE.Scene();
+        this.camera = new Camera(this);
+
+        // resize event
         this.sizes.on('resize', this.resize.bind(this));
+
+        // tick event
+        this.time.on('tick', this.update.bind(this));
     }
 
+    /**
+     * Resize handler
+     * */
     resize(){
-        this.sizes.update();
+        // update the sizes
+        this.sizes.resize();
+
+        // update the camera
+        this.camera.resize();
+    }
+
+    /**
+     * Update handler
+     * */
+    update(){
+        // update the camera
+        this.camera.update();
     }
 }

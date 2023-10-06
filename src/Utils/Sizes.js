@@ -5,12 +5,12 @@ export default class Sizes extends EventEmitter{
     constructor(element = undefined, updateWhenResize = true){
         super();
 
-        const width = element?.clientWidth || window.innerWidth;
-        const height = element?.clientHeight || window.innerHeight;
+        const {width, height} = this.validateWidthAndHeight(element);
 
         // setup
         this.width = width;
         this.height = height;
+        this.aspect = this.width / this.height;
         this.pixelRatio = Math.min(window.devicePixelRatio, 2);
 
         // register resize event
@@ -19,12 +19,19 @@ export default class Sizes extends EventEmitter{
         }
     }
 
-    update(element){
-        const width = element?.clientWidth || window.innerWidth;
-        const height = element?.clientHeight || window.innerHeight;
+    validateWidthAndHeight(element){
+        return {
+            width: element?.clientWidth || window.innerWidth,
+            height: element?.clientHeight || window.innerHeight
+        };
+    }
+
+    resize(element){
+        const {width, height} = this.validateWidthAndHeight(element);
 
         this.width = width;
         this.height = height;
+        this.aspect = this.width / this.height;
         this.pixelRatio = Math.min(window.devicePixelRatio, 2);
     }
 }
