@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "lil-gui": "^0.18.2",
+    "the-new-css-reset": "^1.11.0",
     "three": "^0.157.0"
   }
 }

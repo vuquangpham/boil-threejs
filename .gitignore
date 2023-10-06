@@ -7,3 +7,4 @@
 /.idea/jsLibraryMappings.xml
 /node_modules
 /package-lock.json
+/dist
