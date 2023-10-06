@@ -42,7 +42,6 @@ export default class Floor{
 
         // change the position and rotation
         this.mesh.rotation.x = -Math.PI * 0.5;
-        this.mesh.position.y = -0.5;
 
         // cast shadow
         this.mesh.receiveShadow = true;
