@@ -1,6 +1,6 @@
 # Three.js Boilerplate
 
-> Taken inspiration from Bruno Simon - the author of Three.js Journey course.
+> 🙌 Taken inspiration from Bruno Simon - the author of Three.js Journey course.
 
 > ⚠️ This template is under construction and will be customized accordingly to my Three.js projects.
 
