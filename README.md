@@ -4,7 +4,7 @@
 
 > ⚠️ This template is under construction and will be customized accordingly to my Three.js projects.
 
-👉 <a href="https://boil3js.netlify.app/?debug" target="_blank">Check it here!</a>
+👉 Check it <a href="https://boil3js.netlify.app/?debug" target="_blank">here!</a>
 
 ## Setup
 
@@ -18,7 +18,7 @@ npm install
 
 ## Getting Started
 
-I did almost the necessary code for the Three.js project, you can check it inside the src folder.
+I did almost the necessary code for the Three.js project, you can check it inside the `src` folder.
 
 ### Debug
 
