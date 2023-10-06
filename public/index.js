@@ -5,4 +5,3 @@ import './style.css';
 import Experience from "@/_index";
 
 const experience = new Experience('#canvas');
-console.log(experience);
