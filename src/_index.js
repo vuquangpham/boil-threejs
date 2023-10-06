@@ -19,5 +19,10 @@ export default class Experience{
 
         // setup
         this.sizes = new Sizes();
+        this.sizes.on('resize', this.resize.bind(this));
+    }
+
+    resize(){
+        this.sizes.update();
     }
 }
