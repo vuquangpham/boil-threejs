@@ -21,8 +21,8 @@ export default class Renderer{
         // this.instance.toneMapping = THREE.ReinhardToneMapping;
 
         // shadow
-        // this.instance.shadowMap.enabled = true;
-        // this.instance.shadowMap.type = THREE.PCFSoftShadowMap;
+        this.instance.shadowMap.enabled = true;
+        this.instance.shadowMap.type = THREE.PCFSoftShadowMap;
 
         this.instance.setClearColor('#211d20', 1);
         this.instance.setSize(this.sizes.width, this.sizes.height);
