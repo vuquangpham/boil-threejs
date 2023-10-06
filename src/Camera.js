@@ -9,6 +9,7 @@ export default class Camera{
         this.canvas = this.experience.canvas;
 
         this.setInstance();
+        this.setOrbitControls();
     }
 
     setInstance(){
@@ -23,6 +24,7 @@ export default class Camera{
     }
 
     resize(){
+        this.instance.aspect = this.sizes.aspectRatio;
         this.instance.updateProjectionMatrix();
     }
 

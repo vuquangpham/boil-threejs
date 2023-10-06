@@ -7,6 +7,7 @@ import * as THREE from 'three';
 
 // helpers
 import {validateTarget} from "@/helpers";
+import Renderer from "@/Renderer";
 
 const DEV_MODE = true;
 
@@ -26,6 +27,7 @@ export default class Experience{
         this.time = new Time();
         this.scene = new THREE.Scene();
         this.camera = new Camera(this);
+        this.renderer = new Renderer(this);
 
         // resize event
         this.sizes.on('resize', this.resize.bind(this));
@@ -43,6 +45,9 @@ export default class Experience{
 
         // update the camera
         this.camera.resize();
+
+        // update the renderer
+        this.renderer.resize();
     }
 
     /**
@@ -51,5 +56,8 @@ export default class Experience{
     update(){
         // update the camera
         this.camera.update();
+
+        // update the renderer
+        this.renderer.update();
     }
 }
