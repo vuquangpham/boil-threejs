@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/vuquangpham/boil3js#readme",
   "devDependencies": {
+    "sass": "^1.69.4",
     "vite": "^4.4.11",
     "vite-plugin-glsl": "^1.1.2"
   },
