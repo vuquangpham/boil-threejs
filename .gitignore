@@ -1,10 +1,4 @@
-/.idea/.gitignore
-/.idea/boil3js.iml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/php.xml
-/.idea/vcs.xml
-/.idea/jsLibraryMappings.xml
+.DS_STORE
 /node_modules
 /package-lock.json
 /dist
